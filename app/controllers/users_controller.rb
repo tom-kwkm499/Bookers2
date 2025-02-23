@@ -3,6 +3,8 @@ class UsersController < ApplicationController
   end
 
   def show
+    @books  = Book.all
+    @booknew = Book.new
   end
 
   def edit
