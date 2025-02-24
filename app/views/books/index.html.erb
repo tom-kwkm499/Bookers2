@@ -1,3 +1,7 @@
-<%= render 'books/sidebar', booknew: @booknew, user: @user %>
+<div class='container px-5 px-sm-0'>
+  <div class='row'> 
+    <%= render 'books/sidebar', booknew: @booknew, user: @user %>
 
-<%= render 'books/booklist', books: @books %>
+    <%= render 'books/booklist', books: @books %>
+  </div>
+</div>
