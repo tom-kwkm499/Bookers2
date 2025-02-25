@@ -1,4 +1,22 @@
 <div class='container px-5 px-sm-0'>
+<% if @booknew.errors.any? %>
+            <h3><%= @booknew.errors.count %>error prohibited this obj from being saved:</h3>
+            <ul>
+              <% @booknew.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+            <% end %>
+
+  
+<div id="notice_text">
+  <% if flash[:notice].present? %>
+    <p class="notice"><%= flash[:notice] %></p>
+  <% end %>
+</div>
+
+
+
   <div class='row'> 
     <%= render 'books/sidebar', booknew: @booknew, user: @user %>
 
